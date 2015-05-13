@@ -1,0 +1,11 @@
+docker run -d --name glance-api --net=host --restart=always --env-file=artifacts/docker/openstack.env $image
+docker run -d --name glance-registry --net=host --restart=always --env-file=artifacts/docker/openstack.env $image
+docker run -d --name keystone --net=host --restart=always --env-file=artifacts/docker/openstack.env $image
+docker run -d --name mariadb --net=host --env-file=artifacts/docker/openstack.env -v /var/lib/mysql:/var/lib/mysql -v /var/log/mariadb:/var/log/mariadb $image
+docker run -d --name nova-api --privileged --net=host --restart=always --env-file=artifacts/docker/openstack.env $image
+docker run -d --name=nova-compute --privileged \
+docker run -d --name nova-conductor --net=host --restart=always --env-file=artifacts/docker/openstack.env $image
+docker run -d --name libvirt --privileged \
+docker run -d --name nova-network --net=host --restart=always --privileged --env-file=artifacts/docker/openstack.env $image
+docker run -d --name nova-scheduler --net=host --restart=always --env-file=artifacts/docker/openstack.env $image
+docker run -d --name rabbitmq --net=host --env-file=artifacts/docker/openstack.env $image

@@ -1,0 +1,1 @@
+docker run -d --name nova-conductor --net=host --restart=always --env-file=artifacts/docker/openstack.env $image

@@ -1,0 +1,1 @@
+docker run -d --name=nova-compute --privileged --pid=host --net=host --restart=always -v /sys/fs/cgroup:/sys/fs/cgroup -v /var/lib/nova:/var/lib/nova -v /run:/run -v /etc/libvirt/qemu:/etc/libvirt/qemu --env-file=artifacts/docker/openstack.env $image

@@ -1,0 +1,1 @@
+docker run -d --name mariadb --net=host --env-file=artifacts/docker/openstack.env -v /var/lib/mysql:/var/lib/mysql -v /var/log/mariadb:/var/log/mariadb $image

@@ -1,0 +1,1 @@
+docker run -d --name rabbitmq --net=host --env-file=artifacts/docker/openstack.env $image

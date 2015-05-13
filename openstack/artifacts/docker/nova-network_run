@@ -1,0 +1,1 @@
+docker run -d --name nova-network --net=host --restart=always --privileged --env-file=artifacts/docker/openstack.env $image
