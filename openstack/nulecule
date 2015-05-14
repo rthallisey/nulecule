@@ -117,7 +117,7 @@ graph:
     artifacts:
       docker:
         - file://artifacts/docker/nova-scheduler_run
-    mariadb-app:
+   mariadb-app:
     params:
       image:
         description: The RabbitMQ image
@@ -128,3 +128,14 @@ graph:
     artifacts:
       docker:
         - file://artifacts/docker/mariadb_run
+   horizon-app:
+    params:
+      image:
+        description: The RabbitMQ image
+        default: kollaglue/centos-rdo-horizon
+      hostport:
+        description: The host TCP port as the external endpoint
+        default: 5672
+    artifacts:
+      docker:
+        - file://artifacts/docker/horizon_run
