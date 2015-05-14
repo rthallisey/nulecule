@@ -12,130 +12,94 @@ graph:
       image:
         description: The RabbitMQ image
         default: kollaglue/centos-rdo-rabbitmq
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/rabbitmq_run
    glance-api-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Glance API image
         default: kollaglue/centos-rdo-glance-api
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/glance-api_run
    glance-registry-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Glance Registry image
         default: kollaglue/centos-rdo-glance-registry
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/glance-registry_run
    keystone-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Keystone image
         default: kollaglue/centos-rdo-keystone
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/keystone_run
    libvirt-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Libvirt image
         default: kollaglue/centos-rdo-nova-libvirt
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/libvirt_run
    nova-api-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Nova API image
         default: kollaglue/centos-rdo-nova-api
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/nova-api_run
    nova-compute-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Nova Compute image
         default: kollaglue/centos-rdo-nova-compute
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/nova-compute_run
    nova-conductor-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Nova Conductor image
         default: kollaglue/centos-rdo-nova-conductor
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/nova-conductor_run
    nova-network-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Nova Network image
         default: kollaglue/centos-rdo-nova-network
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/nova-network_run
    nova-scheduler-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Nova Scheduler image
         default: kollaglue/centos-rdo-nova-scheduler
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/nova-scheduler_run
    mariadb-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Mariadb image
         default: kollaglue/centos-rdo-mariadb-app
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/mariadb_run
    horizon-app:
     params:
       image:
-        description: The RabbitMQ image
+        description: The Horizon image
         default: kollaglue/centos-rdo-horizon
-      hostport:
-        description: The host TCP port as the external endpoint
-        default: 5672
     artifacts:
       docker:
         - file://artifacts/docker/horizon_run
